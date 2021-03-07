@@ -1,0 +1,9 @@
+F:\C#\黄耳\黄耳\bin\Debug\黄耳.exe.config
+F:\C#\黄耳\黄耳\bin\Debug\黄耳.exe
+F:\C#\黄耳\黄耳\bin\Debug\黄耳.pdb
+F:\C#\黄耳\黄耳\obj\Debug\黄耳.csprojResolveAssemblyReference.cache
+F:\C#\黄耳\黄耳\obj\Debug\黄耳.frmMain.resources
+F:\C#\黄耳\黄耳\obj\Debug\黄耳.Properties.Resources.resources
+F:\C#\黄耳\黄耳\obj\Debug\黄耳.csproj.GenerateResource.Cache
+F:\C#\黄耳\黄耳\obj\Debug\黄耳.exe
+F:\C#\黄耳\黄耳\obj\Debug\黄耳.pdb

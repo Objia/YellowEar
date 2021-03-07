@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1C68C08-F961-4A2A-9CE4-437BA0989952}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YellowEar</RootNamespace>
+    <AssemblyName>YellowEar</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Batman\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\YellowEar256.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A61889ED54FE6D237D3748B90EB6E8A629833C1E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>YellowEar_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DSkin">
+      <HintPath>D:\VM-Github-repositorys\Dskin\Dskin\AuthorizeDSkin20151015005333\【4.0】DSkin20181215163234\DSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DSkin.Design">
+      <HintPath>D:\VM-Github-repositorys\Dskin\Dskin\AuthorizeDSkin20151015005333\【4.0】DSkin20181215163234\DSkin.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common_Class\ChatData.cs" />
+    <Compile Include="Common_Class\ChatListBoxControl\ChatListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common_Class\ChatListBoxControl\ChatListBox.Designer.cs">
+      <DependentUpon>ChatListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Class\ChatListBoxControl\ChatListEventArgs.cs" />
+    <Compile Include="Common_Class\Serializer.cs" />
+    <Compile Include="Common_Class\GroupInformation.cs" />
+    <Compile Include="Common_Class\Friend_Info.cs" />
+    <Compile Include="Common_Class\Enums.cs" />
+    <Compile Include="Common_Class\MessageEx.cs" />
+    <Compile Include="Common_Class\Qun_Info.cs" />
+    <Compile Include="Common_Class\SQLiteHelper.cs" />
+    <Compile Include="Common_Class\UdpSocket.cs" />
+    <Compile Include="FrmChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChat.Designer.cs">
+      <DependentUpon>FrmChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain\MouseHook.cs" />
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common_Class\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common_Class\SplitButton.Designer.cs">
+      <DependentUpon>SplitButton.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Common_Class\ChatListBoxControl\ChatListBox.resx">
+      <DependentUpon>ChatListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChat.resx">
+      <DependentUpon>FrmChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeHoverImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minHoverImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pnlBottomImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pnlHeaderImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pnlTopImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Context1.png" />
+    <None Include="Resources\Context2.png" />
+    <None Include="Resources\YellowEar.png" />
+    <None Include="Resources\YellowEar256.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbackimage_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbackimage_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatItemHeadImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowEar-Offline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmChatBackgroupImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_close_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_close_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_max_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_max_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_min_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_min_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_min_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_restore_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_restore_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysbtn_restore_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_17.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_20.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_24.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_25.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_26.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_28.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Face_29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄耳32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄耳32_blank.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+    </PropertyGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
